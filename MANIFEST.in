@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include jibu_inc *.css
+recursive-include jibu_inc *.csv
+recursive-include jibu_inc *.html
+recursive-include jibu_inc *.ico
+recursive-include jibu_inc *.js
+recursive-include jibu_inc *.json
+recursive-include jibu_inc *.md
+recursive-include jibu_inc *.png
+recursive-include jibu_inc *.py
+recursive-include jibu_inc *.svg
+recursive-include jibu_inc *.txt
+recursive-exclude jibu_inc *.pyc

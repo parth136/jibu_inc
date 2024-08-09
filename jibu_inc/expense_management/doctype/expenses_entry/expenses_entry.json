@@ -1,0 +1,240 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "format:EXP-{#####}",
+ "creation": "2023-10-14 19:42:46.088616",
+ "default_view": "List",
+ "description": "Expenses entry",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_yowdh",
+  "posting_date",
+  "section_break_mayig",
+  "book_an_expense",
+  "is_payment",
+  "mode_of_payment",
+  "main_column",
+  "liability_or_asset_account",
+  "payment_currency",
+  "dimensions_section",
+  "project",
+  "dimensions_column",
+  "default_cost_center",
+  "expenses_section",
+  "expenses",
+  "total",
+  "total_section",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_filter": 1,
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.is_payment",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_filter": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Mode of Payment",
+   "mandatory_depends_on": "eval:doc.is_payment",
+   "options": "Mode of Payment",
+   "read_only_depends_on": "eval:!doc.company && doc.book_an_expense"
+  },
+  {
+   "fieldname": "main_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Posting Date",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.company",
+   "fieldname": "dimensions_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimensions"
+  },
+  {
+   "fieldname": "dimensions_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Applies to all listed expenses, unless specified differently",
+   "fieldname": "default_cost_center",
+   "fieldtype": "Link",
+   "in_preview": 1,
+   "label": "Default Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "expenses_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "expenses",
+   "fieldtype": "Table",
+   "in_preview": 1,
+   "label": "Expenses",
+   "mandatory_depends_on": "eval:!doc.expenses_request_ref",
+   "options": "Expenses Item",
+   "read_only_depends_on": "eval:doc.expenses_request_ref"
+  },
+  {
+   "fieldname": "total_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.liability_or_asset_account",
+   "fieldname": "payment_currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Expenses Entry",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.is_payment && doc.company",
+   "fieldname": "book_an_expense",
+   "fieldtype": "Check",
+   "label": "Book an Expense?"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.book_an_expense && doc.company",
+   "fieldname": "is_payment",
+   "fieldtype": "Check",
+   "label": "Is Payment?"
+  },
+  {
+   "depends_on": "eval:doc.book_an_expense || doc.mode_of_payment",
+   "fieldname": "liability_or_asset_account",
+   "fieldtype": "Link",
+   "label": "Account (Credit)",
+   "options": "Account",
+   "read_only_depends_on": "eval:doc.mode_of_payment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yowdh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_mayig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Total",
+   "options": "payment_currency",
+   "read_only": 1
+  },
+  {
+   "description": "Use only if expenses are project related.",
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Default Project",
+   "options": "Project"
+  }
+ ],
+ "icon": "fa fa-file-text",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-10-18 16:49:53.635698",
+ "modified_by": "Administrator",
+ "module": "Expense Management",
+ "name": "Expenses Entry",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-17 16:18:47.704724",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_1",
+  "10_litre",
+  "column_break_3",
+  "189_litre",
+  "column_break_5",
+  "20_litre"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "10_litre",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "10 Litre ",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "20_litre",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "20 Litre",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "189_litre",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "18.9 Litre",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-07-17 16:20:56.570962",
+ "modified_by": "Administrator",
+ "module": "Jibu Inc",
+ "name": "Pending Bottles Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

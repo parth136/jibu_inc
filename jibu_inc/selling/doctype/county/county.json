@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:county",
+ "creation": "2023-01-23 10:57:09.861445",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "county",
+  "region",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "county",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "County",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Region",
+   "options": "\nCentral\nCentral Rift\nCoast\nEastern\nNairobi Metropolis\nNorth Eastern\nNorth Rift\nWestern",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-23 11:11:35.594707",
+ "modified_by": "Administrator",
+ "module": "Selling",
+ "name": "County",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

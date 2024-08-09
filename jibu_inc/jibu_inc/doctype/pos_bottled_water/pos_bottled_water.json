@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2024-01-13 21:26:11.156555",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "cumulative_qty",
+  "total_litres_bottled"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "columns": 2,
+   "fieldname": "cumulative_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_litres_bottled",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Litres Bottled",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-13 21:44:12.522375",
+ "modified_by": "Administrator",
+ "module": "Jibu Inc",
+ "name": "POS Bottled Water",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

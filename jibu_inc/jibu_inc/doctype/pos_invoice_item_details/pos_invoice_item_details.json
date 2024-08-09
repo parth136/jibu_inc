@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "creation": "2023-07-12 22:28:31.467347",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "cumulative_qty",
+  "total_base_amount",
+  "total_base_net_amount",
+  "total_litres",
+  "total_litres_bottled"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "cumulative_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_base_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_base_net_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Net Amount"
+  },
+  {
+   "columns": 2,
+   "fieldname": "total_litres",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Litres Sold",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "total_litres_bottled",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Litres Bottled",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-13 20:58:11.166723",
+ "modified_by": "Administrator",
+ "module": "Jibu Inc",
+ "name": "POS Invoice Item Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
